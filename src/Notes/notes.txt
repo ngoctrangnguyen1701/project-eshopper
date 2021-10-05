@@ -1,0 +1,29 @@
+1. Đối với fetch các sản phầm cùng category, 
+trước khi fetch sẽ kiểm tra xem các product cùng category đã được fetch lưu vào trong store chưa
+(lưu ở thuộc tính 'sameCategory' nằm trong thuộc tính productsByCategory ở trong store)
+nếu đã có thì sẽ không fetch nữa mà lấy dữ liệu từ trong store ra
+thiết lập kiểm tra ở <ProductsByCategoryContainer/> và <ProductDetailsContainer/>
+
+2. Khi click vào link ở <CategoryItem/>, sản phẩm cùng category sẽ hiển thị từ trang 1
+    Khi trở về lại trang Home, hiển thị ra tất cả sản phẩm cũng bắt đầu từ trang 1
+==> Giải quyết vấn đề ở component có cái <Link> click vào để render ra các sản phẩm
+
+3. <ProductsByCategoryContainer/> và <AllProductsContainer/> sử dụng chung component <AllProducts/> và <ProductItem/>
+4. Giới hạn số lượng sản phẩm trong giỏ hàng chỉ từ 1 đến 15
+5. Khi thực hiện chức năng Sort thì hiển thị sản phẩm sẽ trả về bắt đầu từ trang 1
+
+6. Auth
+sign up với các thông tin -> sau khi đã sign up sẽ hiện fake login,
+sau khi log in thành công, nhận được token từ api
+    + nếu tick vào 'remember password' thì lưu token vào localStoreage
+    + từ trang '/auth' redirect sang trang '/'
+khi log out, trả token về null, xóa token trong localStoreage(nếu có)
+
+7. Cart khi có log in
+mọi cái action liên quan đến cart (như add to cart, delete...) đều phải kèm theo cái token nhận được khi log in
+để gửi lên server(mock api)
+
+8. Chức năng WishList
+chỉ áp dụng khi có log in, 
+thay đổi gửi lên server phải kèm theo token và danh sách wishlis là 1 mảng chứa các productId
+

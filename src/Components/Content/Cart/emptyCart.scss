@@ -1,0 +1,29 @@
+/* FE980F */
+.empty-cart{
+    text-align: center;
+    //display: flex;
+
+    .empty-cart-img{
+        width: 100%;
+        
+    }
+
+    .empty-cart-text{
+        font-size: 35px;
+        display: block;
+        color: gray;
+        margin-top: 15px;
+    }
+
+    .empty-cart-link{
+        display: inline-block;
+        font-size: 20px;
+        background-color: #FE980F;
+        margin: 30px 0;
+        padding: 15px 30px;
+
+        a{
+            color: #fff;
+        }
+    }
+}

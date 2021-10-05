@@ -1,0 +1,36 @@
+.search-sort-product{
+    display: flex;
+    justify-content: flex-end;
+    margin: 15px 15px 30px 0;
+
+    button{
+        display: inline-block;
+        margin-left: 15px;
+        border: none;
+        border-radius: 5px;
+        padding: 5px 10px;
+    }
+
+    button:hover{
+        background-color: #FE980F;
+        color: #fff
+    }
+
+    i{
+        margin-left: 5px;
+    }
+}
+
+.filter{
+    border-bottom: 1px solid gainsboro;
+    padding-bottom: 15px;
+
+    label{
+        margin-right: 5px;
+    }
+
+    label, select{
+        display: inline-block;
+        width: auto;
+    }
+}

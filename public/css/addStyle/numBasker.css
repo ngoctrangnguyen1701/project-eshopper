@@ -1,0 +1,12 @@
+.num-Basket {
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    font-size: 12px;
+    border-radius: 50%;
+    background-color: #FE980F;
+    text-align: center;
+    display: inline-block;
+    margin-left: 5px;
+    color: #fff;
+}
