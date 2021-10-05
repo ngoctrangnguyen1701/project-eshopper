@@ -20,6 +20,7 @@ function HeaderContainer(props) {
     const onSearch = keyword => {
         setKeyword('');
         dispatch(productAction.set_Page(1));
+        dispatch(productAction.filter_price('all'));
         dispatch(productAction.search_Request(keyword));
     };
 
@@ -27,18 +28,24 @@ function HeaderContainer(props) {
         dispatch(authAction.log_Out());
     };
 
+    const onSetDefault = () => {
+        dispatch(productAction.set_Page(1));
+        dispatch(productAction.filter_price('all'));
+    };
+
     return (
         <Header>
             <HeaderTop />
             <HeaderMiddle
                 numBasket={quantityInCart}
-                onSetPage_1={()=>dispatch(productAction.set_Page(1))}
+                onSetDefault={onSetDefault}
                 //thì sẽ trả lại cho thuộc tính page = 1 nằm trong reducer của product
                 //để khi click lại vào trang Home, các sản phẩm sẽ hiển thị bắt đầu từ trang 1
+                //và filter giá tiền cũng bắt đầu từ 'all'
                 menu={token ? <MenuLogedIn onLogOut={onLogOut} /> : <MenuNoLogIn />}
             />
             <HeaderBottom
-                onSetPage_1={()=>dispatch(productAction.set_Page(1))}
+                onSetDefault={onSetDefault}
                 onSearch={onSearch}
                 keyword={keyword}
                 setKeyword={setKeyword}

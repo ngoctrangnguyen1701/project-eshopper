@@ -7,7 +7,7 @@ const buttonStyle = {
     border: "none"
 }
 function HeaderBottom(props) {
-    const { onSetPage_1, onSearch, keyword, setKeyword } = props;
+    const { onSetDefault, onSearch, keyword, setKeyword } = props;
     const matchHome = useRouteMatch({
         path: '/',
         exact: true
@@ -38,7 +38,7 @@ function HeaderBottom(props) {
                                     <Link
                                         to="/" 
                                         className={matchHome ? "active" : ''}
-                                        onClick={onSetPage_1}
+                                        onClick={onSetDefault}
                                     >Home</Link>
                                 </li>
                                 <li className="dropdown">

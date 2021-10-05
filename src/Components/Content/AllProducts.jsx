@@ -97,7 +97,7 @@ function AllProducts(props) {
                                     <option value="all">All</option>
                                     <option value="under 50">Under $50</option>
                                     <option value="50 - 100">$50 ~ $100</option>
-                                    <option value="above 100">Above $50</option>
+                                    <option value="above 100">Above $100</option>
                                 </select>
                             </div>
                             <div className="search-sort-product">

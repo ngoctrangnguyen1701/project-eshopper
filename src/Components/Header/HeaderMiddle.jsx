@@ -3,7 +3,7 @@ import { Link, useRouteMatch } from 'react-router-dom';
 const activeStyle = {color: '#fe980f'};
 
 function HeaderMiddle(props) {
-    const { onSetPage_1, numBasket, menu } = props;
+    const { onSetDefault, numBasket, menu } = props;
 
     return (
         <div className="header-middle">
@@ -13,7 +13,7 @@ function HeaderMiddle(props) {
                         <div className="logo pull-left">
                             <Link
                                 to="/"
-                                onClick={()=>onSetPage_1()}
+                                onClick={onSetDefault}
                             >
                                 <img src="images/home/logo.png" alt="" />
                             </Link>
