@@ -9,13 +9,6 @@ const arrowStyle = {
     cursor: "pointer"
 };
 
-const addStyle = {
-    width: "100%",
-    display: "flex",
-    /* justifyContent: "center", */
-    alignItems: "center"
-}
-
 function DetailsTop(props) {
     const { title, image, price, rating} = props.details;
     const { showRating, quantity, changeQuantity, onAddToCart, elementAddToCart } = props;
@@ -40,28 +33,26 @@ function DetailsTop(props) {
                     <span>votes</span>
                     <span>
                         <span>US ${price}</span>
-                        <div style={addStyle}>
-                            <label style={{marginBottom: "0px"}}>Quantity:</label>
-                            <i
-                                className="fas fa-arrow-circle-down"
-                                style={arrowStyle}
-                                onClick={()=>changeQuantity(quantity - 1)}
-                            ></i>
-                            <input 
-                                style={{display: "inline-block", margin: "0 2px"}}
-                                readOnly
-                                value={quantity}
-                            />
-                            <i
-                                className="fas fa-arrow-circle-up"
-                                style={arrowStyle}
-                                onClick={()=>changeQuantity(quantity + 1)}
-                            ></i>
-                            <div
-                                style={{display: "inline-block", marginBottom: "-10px", width: "50%"}}
-                                onClick={onAddToCart}>
-                                {elementAddToCart}
-                            </div>
+                        <label style={{marginBottom: "0px"}}>Quantity:</label>
+                        <i
+                            className="fas fa-arrow-circle-down"
+                            style={arrowStyle}
+                            onClick={()=>changeQuantity(quantity - 1)}
+                        ></i>
+                        <input 
+                            style={{display: "inline-block", margin: "0 2px"}}
+                            readOnly
+                            value={quantity}
+                        />
+                        <i
+                            className="fas fa-arrow-circle-up"
+                            style={arrowStyle}
+                            onClick={()=>changeQuantity(quantity + 1)}
+                        ></i>
+                        <div
+                            style={{margin: "10px 0", width: "100%"}}
+                            onClick={onAddToCart}>
+                            {elementAddToCart}
                         </div>
                     </span>
                     <p><b>Availability:</b> In Stock</p>
